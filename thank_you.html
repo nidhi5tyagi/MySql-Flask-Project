@@ -1,0 +1,12 @@
+<h1>Thank You for Contacting Us!</h1>
+<p>We have received your message, {{ first_name }} {{ last_name }}.</p>
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
